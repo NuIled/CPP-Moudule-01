@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humanB.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 23:56:37 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/10/09 00:03:34 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/11/04 11:41:22 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 class HumanB {
 	std::string _name;
 	Weapon *Weapons;
+	bool have_weapons;
 public:
 		HumanB(std::string name);
 		~HumanB();

@@ -6,25 +6,21 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 02:23:58 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/10/02 21:03:38 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/11/04 12:50:47 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+void randomChump( std::string name );
+Zombie* newZombie( std::string name );
 
 int main()
 {
-    int input;
     std::string name;
-    Log("ENTER NUMBER OF ZOMBIRES YOU WANT TO CRATE");
-    std::cin >> input;
-    if (std::cin.fail())
-        exit(0);
-    for (int i = 0; i < input; i++)
-    {
-        Log("ENTER THE NAME OF ZOMBIE");
-        std::cin >> name;
-        randomChump(name);
-    }
+    name = "ZOMBIE";
+    Zombie *Z = newZombie(name);
+    Z->announce();
+    randomChump(name);
+    delete Z;
     return 0;
 }

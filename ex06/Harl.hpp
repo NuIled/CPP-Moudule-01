@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 23:23:31 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/11/03 12:39:17 by aoutifra         ###   ########.fr       */
+/*   Created: 2023/10/13 05:11:38 by aoutifra          #+#    #+#             */
+/*   Updated: 2023/10/13 05:22:04 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef Harl_HPP
+#define Harl_HPP
+#include <iostream>
 
-void Zombie::announce(void)
-{
-    Log(this->name_i << " BraiiiiiiinnnzzzZ...");    
-}
+#define Log(x) std::cout << x << std::endl;
 
-Zombie::Zombie() {
-}
+class Harl {
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+public:
+		Harl();
+		void complain( std::string level );
+		~Harl();
+};
 
-void Zombie::Zombie_name(std::string names) {
-    this->name_i = names;
-}
-
-Zombie::~Zombie() {
-    Log(this->name_i << " Has been destroyed");    
-}
+typedef void (Harl::*Fp_function)(void);
+#endif // Harl_H

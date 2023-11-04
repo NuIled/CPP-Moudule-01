@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 23:56:31 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/10/08 22:41:47 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/11/03 12:53:39 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class HumanA {
 	std::string _name;
-	Weapon *Weapons;
+	Weapon &Weapons;
 public:
 		HumanA(std::string name,Weapon &object);
 		~HumanA();

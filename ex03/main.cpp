@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:23:43 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/10/09 00:05:52 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/11/04 11:42:55 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int main()
     {
         Weapon club = Weapon("crude spiked club");
         HumanB jim("Jim");
+        jim.attack();
         jim.setWeapon(club);
         jim.attack();
         club.setType("some other type of club");
         jim.attack();
     }
-
     return 0;
 }

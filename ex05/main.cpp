@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 23:23:31 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/11/03 12:39:17 by aoutifra         ###   ########.fr       */
+/*   Created: 2023/10/13 05:26:16 by aoutifra          #+#    #+#             */
+/*   Updated: 2023/11/04 13:08:10 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-void Zombie::announce(void)
+int main ()
 {
-    Log(this->name_i << " BraiiiiiiinnnzzzZ...");    
-}
-
-Zombie::Zombie() {
-}
-
-void Zombie::Zombie_name(std::string names) {
-    this->name_i = names;
-}
-
-Zombie::~Zombie() {
-    Log(this->name_i << " Has been destroyed");    
+    std::string input;
+    Harl harly;
+    do
+    {
+        std::cout << "harl is wating for your input" << std::endl;
+        std::cin >> input;
+        if(std::cin.fail())
+            exit(1);
+        harly.complain(input);
+        std::cin.clear();
+    }while(input.compare("exit"));
 }

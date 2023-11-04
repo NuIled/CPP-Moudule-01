@@ -6,7 +6,7 @@
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 23:23:34 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/09/26 05:30:11 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/11/03 12:33:59 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ public:
 	~Zombie();
 	void announce(void); 
 };
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
 
 #endif // Zombie_H
 
